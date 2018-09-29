@@ -12,9 +12,10 @@ node('haimaxy-jnlp') {
     stage('Test') {
       echo "2.Test Stage"
     }
+    
     stage('Build') {
         echo "3.Build Docker Image Stage"
-        sh "docker build -t cnych/jenkins-demo:${build_tag} ."
+        sh "docker build -t liuzozo/jenkins-demo:${build_tag} ."
     }
 
       stage('Push') {
